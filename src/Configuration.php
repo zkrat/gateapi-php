@@ -25,6 +25,8 @@
 
 namespace GateApi;
 
+use GuzzleHttp\Psr7\Query;
+
 /**
  * Configuration Class Doc Comment
  * PHP version 7
@@ -411,7 +413,7 @@ class Configuration
             $fmt,
             $method,
             $fullPath,
-            \GuzzleHttp\Psr7\build_query($queryParams, false),
+            Query::build($queryParams, false),
             $hashedPayload,
             $timestamp
         );
